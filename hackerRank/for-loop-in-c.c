@@ -14,7 +14,13 @@ int main()
     "six", "seven", "eight", "nine", "even", "odd"};
     int labels_index;
     for (int i=a; i<=b; i++) {
-        labels_index = i <= 9 ? i - 1 : 9 + i % 2;
+        if (i<=9) {
+          labels_index = i - 1;
+        }
+        else {
+          labels_index = 9 + i%2;
+        }
+        printf("%s\n", labels[labels_index]);
     }
     return 0;
 }
